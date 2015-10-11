@@ -6,7 +6,6 @@ class SocketController < WebsocketRails::BaseController
   end
 
   def new_message
-    message = message[:body]
     broadcast_message :new_message, message
   end
 end
