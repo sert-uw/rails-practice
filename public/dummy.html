@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>Dummy Page</title>
+</head>
+<body>
+
+  <h1>Dummy Page</h1>
+
+  <script>
+    window.onload = function() {
+    var referrer = document.referrer;
+    var xhr = new XMLHttpRequest();
+
+    var data = { body: 'I am visitor' }
+
+    xhr.open("POST", "/visitors");
+    xhr.setRequestHeader('Content-Type', 'application/json' );
+    xhr.send(window.JSON.stringify(data));
+    }
+  </script>
+</body>
+</html>
