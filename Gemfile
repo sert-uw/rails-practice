@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'devise'
 gem 'websocket-rails'
+gem 'bootstrap-sass'
+gem 'sprockets'
 
 group :doc do
   gem 'yard'
