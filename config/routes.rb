@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tags
   root 'receivers#index'
 
   devise_for :users
