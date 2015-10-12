@@ -1,0 +1,17 @@
+<p>
+  <strong>Sex:</strong>
+  <% if @visitor.sex == 0 %>
+    Not Select
+  <% elsif @visitor.sex == 1 %>
+    Man
+  <% else %>
+    Weman
+  <% end %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @visitor.age %>
+</p>
+
+<%= link_to 'Back', visitors_path %>

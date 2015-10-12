@@ -1,0 +1,13 @@
+<%= form_for(@visitor) do |f| %>
+  <div class="field">
+    <%= f.label :sex %><br>
+    <%= f.select :sex, [["Not Select", "0"], ["Man", "1"], ["Weman", "2"]]%>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.text_field :age %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
