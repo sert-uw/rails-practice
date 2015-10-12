@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20151012081721) do
 
   create_table "referrers", force: :cascade do |t|
-    t.integer  "user_id",     limit: 4
+    t.integer  "visitor_id",  limit: 4
     t.string   "access_from", limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
