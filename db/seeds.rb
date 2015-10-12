@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Tag.create(name: '男性')
+Tag.create(name: '女性')
+Tag.create(name: '10代')
+Tag.create(name: '20代')
+Tag.create(name: '30代')
+Tag.create(name: '40代')
+Tag.create(name: '50代')
+Tag.create(name: '60代')
