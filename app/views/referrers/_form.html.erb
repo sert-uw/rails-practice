@@ -1,0 +1,15 @@
+<%= form_for(@referrer) do |f| %>
+  <div class="field">
+    <%= f.label :visitor_id %><br>
+    <%= f.text_field :visitor_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :access_from %><br>
+    <%= f.text_field :access_from %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

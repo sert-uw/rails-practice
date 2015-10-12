@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :visitors
+  resources :visitors, only: [:index, :new, :show, :create]
+  resources :referrers, only: [:new, :show, :create]
 end
