@@ -11,13 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012155216) do
+ActiveRecord::Schema.define(version: 20151012160252) do
 
   create_table "referrers", force: :cascade do |t|
     t.integer  "visitor_id",  limit: 4
     t.string   "access_from", limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+  end
+
+  create_table "segment_tags", force: :cascade do |t|
+    t.integer  "segment_id", limit: 4
+    t.integer  "tag_id",     limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "segments", force: :cascade do |t|
