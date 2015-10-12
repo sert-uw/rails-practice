@@ -6,6 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Visitor.create(sex: 1, age: 10)
+Visitor.create(sex: 2, age: 20)
+Visitor.create(sex: 1, age: 30)
+Visitor.create(sex: 2, age: 40)
+Visitor.create(sex: 1, age: 50)
+Visitor.create(sex: 2, age: 60)
+
 tag1 = Tag.create(name: '男性')
 tag2 = Tag.create(name: '女性')
 tag3 = Tag.create(name: '10代')
