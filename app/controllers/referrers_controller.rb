@@ -7,7 +7,7 @@ class ReferrersController < ApplicationController
 
   def create
     @referrer = Referrer.create(referrer_params)
-    redirect_to new_referrer_path
+    redirect_to new_referrer_path, notice: 'Referrer was successfully created.'
   end
 
   private
