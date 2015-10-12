@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'chat#index'
+  root 'receivers#index'
 
   devise_for :users
 

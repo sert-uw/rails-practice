@@ -1,4 +1,4 @@
-class ChatController < ApplicationController
+class ReceiversController < ApplicationController
   before_action :authenticate_user!
 
   def index
