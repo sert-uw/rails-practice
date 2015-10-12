@@ -15,7 +15,11 @@ class @ChatClass
     $('#text').val('')
 
   receiveMessage: (message) =>
-    $('#visitor').append "<p class='left'>#{ message.body }</p>"
-
+    sex = message.sex
+    age = message.age
+    af = message.access_from
+    aa = message.accessed_at
+    row = "<tr><td>#{sex}</td><td>#{age}</td><td>#{af}</td><td>#{aa}</td></tr>"
+    $('#visitor').append row
 $ ->
   window.chatClass = new ChatClass("localhost:3000/websocket", true)
