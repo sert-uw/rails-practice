@@ -6,6 +6,6 @@ class SocketController < WebsocketRails::BaseController
   end
 
   def new_message
-    broadcast_message :new_message, message
+    WebsocketRails[:visitor].trigger :visitor, message
   end
 end

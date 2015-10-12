@@ -1,12 +1,13 @@
 class @ChatClass
   constructor: (url, useWebsocket) ->
     @dispatcher = new WebSocketRails(url, useWebsocket)
+    @channel = @dispatcher.subscribe('visitor')
     console.log(url)
     @events()
 
   events: () =>
     $('#button').on 'click', @submitMessage
-    @dispatcher.bind 'new_message', @receiveMessage
+    @channel.bind 'visitor', @receiveMessage
 
   submitMessage: (event) =>
     msg_body = $('#text').val()
@@ -14,7 +15,7 @@ class @ChatClass
     $('#text').val('')
 
   receiveMessage: (message) =>
-    $('#message').append "<p class='left'>#{ message.body }</p>"
+    $('#visitor').append "<p class='left'>#{ message.body }</p>"
 
 $ ->
   window.chatClass = new ChatClass("localhost:3000/websocket", true)
