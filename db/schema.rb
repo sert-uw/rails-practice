@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012160252) do
+ActiveRecord::Schema.define(version: 20151013022206) do
+
+  create_table "con_actions", force: :cascade do |t|
+    t.string   "name",        limit: 255
+    t.string   "target_page", limit: 255
+    t.string   "text",        limit: 255
+    t.string   "image_path",  limit: 255
+    t.string   "link",        limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "referrers", force: :cascade do |t|
     t.integer  "visitor_id",  limit: 4

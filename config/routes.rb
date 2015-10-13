@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :con_actions
   resources :tags
   root 'receivers#index'
 

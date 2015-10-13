@@ -1,0 +1,39 @@
+<div id="form">
+<%= form_for(@con_action) do |f| %>
+  <% if @con_action.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@con_action.errors.count, "error") %> prohibited this con_action from being saved:</h2>
+
+      <ul>
+      <% @con_action.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'アクション名' %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label '対象ページ' %>
+    <%= f.text_field :target_page %>
+  </div>
+  <div class="field">
+    <%= f.label 'テキスト' %>
+    <%= f.text_field :text %>
+  </div>
+  <div class="field">
+    <%= f.label '画像' %>
+    <%= f.text_field :image_path %>
+  </div>
+  <div class="field">
+    <%= f.label 'リンク' %>
+    <%= f.text_field :link %>
+  </div>
+  <div class="actions">
+    <%= f.submit '作成' %>
+  </div>
+<% end %>
+</div>
