@@ -28,7 +28,10 @@ class BindsController < ApplicationController
 
     respond_to do |format|
       if @bind.save
-        format.html { redirect_to @bind, notice: 'Bind was successfully created.' }
+        fb = Feedback.create
+        @bind.feedback = fb
+
+        format.html { redirect_to binds_path, notice: 'Bind was successfully created.' }
         format.json { render :show, status: :created, location: @bind }
       else
         format.html { render :new }
