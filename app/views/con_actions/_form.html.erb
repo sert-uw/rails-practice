@@ -1,3 +1,4 @@
+<div id="form">
 <%= form_for(@con_action) do |f| %>
   <% if @con_action.errors.any? %>
     <div id="error_explanation">
@@ -12,26 +13,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label 'アクション名' %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :target_page %><br>
+    <%= f.label '対象ページ' %>
     <%= f.text_field :target_page %>
   </div>
   <div class="field">
-    <%= f.label :text %><br>
+    <%= f.label 'テキスト' %>
     <%= f.text_field :text %>
   </div>
   <div class="field">
-    <%= f.label :image_path %><br>
+    <%= f.label '画像' %>
     <%= f.text_field :image_path %>
   </div>
   <div class="field">
-    <%= f.label :link %><br>
+    <%= f.label 'リンク' %>
     <%= f.text_field :link %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit '作成' %>
   </div>
 <% end %>
+</div>
