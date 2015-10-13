@@ -60,3 +60,10 @@ seg7.tags << tag7
 
 seg8 = Segment.create(name: '60代セグ')
 seg8.tags << tag8
+
+ConAction.create(name: 'アク1', target_page: 'page1', text: 'アクション1', image_path: 'images1', link: 'linkPage1')
+ConAction.create(name: 'アク2', target_page: 'page2', text: 'アクション2', image_path: 'images2', link: 'linkPage2')
+ConAction.create(name: 'アク3', target_page: 'page3', text: 'アクション3', image_path: 'images3', link: 'linkPage3')
+ConAction.create(name: 'アク4', target_page: 'page4', text: 'アクション4', image_path: 'images4', link: 'linkPage4')
+ConAction.create(name: 'アク5', target_page: 'page5', text: 'アクション5', image_path: 'images5', link: 'linkPage5')
+ConAction.create(name: 'アク6', target_page: 'page6', text: 'アクション6', image_path: 'images6', link: 'linkPage6')
