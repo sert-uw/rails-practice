@@ -81,45 +81,45 @@ bin10 = Bind.create(segment_id: seg6.id, con_action_id: ca4.id)
 bin11 = Bind.create(segment_id: seg5.id, con_action_id: ca5.id)
 
 fb1 = Feedback.create(bind_id: bin1, responce_click: 60, responce_close: 40, time_click: 10, time_close: 2)
-bin1.feedback_id = fb1
+bin1.feedback_id = fb1.id
 bin1.save
 
 fb2 = Feedback.create(bind_id: bin2, responce_click: 50, responce_close: 50, time_click: 9, time_close: 3)
-bin2.feedback_id = fb2
+bin2.feedback_id = fb2.id
 bin2.save
 
 fb3 = Feedback.create(bind_id: bin3, responce_click: 40, responce_close: 60, time_click: 8, time_close: 4)
-bin3.feedback_id = fb3
+bin3.feedback_id = fb3.id
 bin3.save
 
 fb4 = Feedback.create(bind_id: bin4, responce_click: 30, responce_close: 70, time_click: 7, time_close: 5)
-bin4.feedback_id = fb4
+bin4.feedback_id = fb4.id
 bin4.save
 
 fb5 = Feedback.create(bind_id: bin5, responce_click: 20, responce_close: 80, time_click: 6, time_close: 6)
-bin5.feedback_id = fb5
+bin5.feedback_id = fb5.id
 bin5.save
 
 fb6 = Feedback.create(bind_id: bin6, responce_click: 10, responce_close: 90, time_click: 5, time_close: 7)
-bin6.feedback_id = fb6
+bin6.feedback_id = fb6.id
 bin6.save
 
 fb7 = Feedback.create(bind_id: bin7, responce_click: 20, responce_close: 80, time_click: 6, time_close: 8)
-bin7.feedback_id = fb7
+bin7.feedback_id = fb7.id
 bin7.save
 
 fb8 = Feedback.create(bind_id: bin8, responce_click: 60, responce_close: 40, time_click: 10, time_close: 2)
-bin8.feedback_id = fb8
+bin8.feedback_id = fb8.id
 bin8.save
 
 fb9 = Feedback.create(bind_id: bin9, responce_click: 90, responce_close: 10, time_click: 10, time_close: 2)
-bin9.feedback_id = fb9
+bin9.feedback_id = fb9.id
 bin9.save
 
 fb10 = Feedback.create(bind_id: bin10, responce_click: 80, responce_close: 20, time_click: 12, time_close: 1)
-bin10.feedback_id = fb10
+bin10.feedback_id = fb10.id
 bin10.save
 
 fb11 = Feedback.create(bind_id: bin11, responce_click: 40, responce_close: 60, time_click: 8, time_close: 6)
-bin11.feedback_id = fb11
+bin11.feedback_id = fb11.id
 bin11.save
