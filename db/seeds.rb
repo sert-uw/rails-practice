@@ -61,9 +61,54 @@ seg7.tags << tag7
 seg8 = Segment.create(name: '60代セグ')
 seg8.tags << tag8
 
-ConAction.create(name: 'アク1', target_page: 'page1', text: 'アクション1', image_path: 'images1', link: 'linkPage1')
-ConAction.create(name: 'アク2', target_page: 'page2', text: 'アクション2', image_path: 'images2', link: 'linkPage2')
-ConAction.create(name: 'アク3', target_page: 'page3', text: 'アクション3', image_path: 'images3', link: 'linkPage3')
-ConAction.create(name: 'アク4', target_page: 'page4', text: 'アクション4', image_path: 'images4', link: 'linkPage4')
-ConAction.create(name: 'アク5', target_page: 'page5', text: 'アクション5', image_path: 'images5', link: 'linkPage5')
-ConAction.create(name: 'アク6', target_page: 'page6', text: 'アクション6', image_path: 'images6', link: 'linkPage6')
+ca1 = ConAction.create(name: 'アク1', target_page: 'page1', text: 'アクション1', image_path: 'images1', link: 'linkPage1')
+ca2 = ConAction.create(name: 'アク2', target_page: 'page2', text: 'アクション2', image_path: 'images2', link: 'linkPage2')
+ca3 = ConAction.create(name: 'アク3', target_page: 'page3', text: 'アクション3', image_path: 'images3', link: 'linkPage3')
+ca4 = ConAction.create(name: 'アク4', target_page: 'page4', text: 'アクション4', image_path: 'images4', link: 'linkPage4')
+ca5 = ConAction.create(name: 'アク5', target_page: 'page5', text: 'アクション5', image_path: 'images5', link: 'linkPage5')
+ca6 = ConAction.create(name: 'アク6', target_page: 'page6', text: 'アクション6', image_path: 'images6', link: 'linkPage6')
+
+bin1 = Bind.create(segment_id: seg1.id, con_action_id: ca6.id)
+bin2 = Bind.create(segment_id: seg2.id, con_action_id: ca5.id)
+bin3 = Bind.create(segment_id: seg3.id, con_action_id: ca4.id)
+bin4 = Bind.create(segment_id: seg4.id, con_action_id: ca3.id)
+bin5 = Bind.create(segment_id: seg5.id, con_action_id: ca2.id)
+bin6 = Bind.create(segment_id: seg6.id, con_action_id: ca1.id)
+bin7 = Bind.create(segment_id: seg7.id, con_action_id: ca1.id)
+bin8 = Bind.create(segment_id: seg8.id, con_action_id: ca2.id)
+bin9 = Bind.create(segment_id: seg7.id, con_action_id: ca3.id)
+bin10 = Bind.create(segment_id: seg6.id, con_action_id: ca4.id)
+bin11 = Bind.create(segment_id: seg5.id, con_action_id: ca5.id)
+
+fb1 = Feedback.create(bind_id: bin1, responce_click: 60, responce_close: 40, time_click: 10, time_close: 2)
+bin1.feedback = fb1
+
+fb2 = Feedback.create(bind_id: bin2, responce_click: 50, responce_close: 50, time_click: 9, time_close: 3)
+bin2.feedback = fb2
+
+fb3 = Feedback.create(bind_id: bin3, responce_click: 40, responce_close: 60, time_click: 8, time_close: 4)
+bin3.feedback = fb3
+
+fb4 = Feedback.create(bind_id: bin4, responce_click: 30, responce_close: 70, time_click: 7, time_close: 5)
+bin4.feedback = fb4
+
+fb5 = Feedback.create(bind_id: bin5, responce_click: 20, responce_close: 80, time_click: 6, time_close: 6)
+bin5.feedback = fb5
+
+fb6 = Feedback.create(bind_id: bin6, responce_click: 10, responce_close: 90, time_click: 5, time_close: 7)
+bin6.feedback = fb6
+
+fb7 = Feedback.create(bind_id: bin7, responce_click: 20, responce_close: 80, time_click: 6, time_close: 8)
+bin7.feedback = fb7
+
+fb8 = Feedback.create(bind_id: bin8, responce_click: 60, responce_close: 40, time_click: 10, time_close: 2)
+bin8.feedback = fb8
+
+fb9 = Feedback.create(bind_id: bin9, responce_click: 90, responce_close: 10, time_click: 10, time_close: 2)
+bin9.feedback = fb9
+
+fb10 = Feedback.create(bind_id: bin10, responce_click: 80, responce_close: 20, time_click: 12, time_close: 1)
+bin10.feedback = fb10
+
+fb11 = Feedback.create(bind_id: bin11, responce_click: 40, responce_close: 60, time_click: 8, time_close: 6)
+bin11.feedback = fb11
