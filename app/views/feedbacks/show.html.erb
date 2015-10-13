@@ -1,0 +1,26 @@
+<h1>フィードバック</h1>
+
+<table id="feedback_table">
+  <thead>
+    <tr>
+      <td></td>
+      <td>クリック</td>
+      <td>閉じる</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>反応率</td>
+      <td><%= @feedback.responce_click %>%</td>
+      <td><%= @feedback.responce_close %>%</td>
+    </tr>
+    <tr>
+      <td>平均時間</td>
+      <td><%= @feedback.time_click %>%</td>
+      <td><%= @feedback.time_close %>%</td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "戻る", binds_path %>

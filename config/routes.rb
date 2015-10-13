@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :binds
+  resources :binds do
+    resources :feedbacks
+  end
   resources :con_actions
   resources :tags
   root 'receivers#index'

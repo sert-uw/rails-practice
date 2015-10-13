@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013022206) do
+ActiveRecord::Schema.define(version: 20151013025015) do
+
+  create_table "binds", force: :cascade do |t|
+    t.integer  "segment_id",    limit: 4
+    t.integer  "con_action_id", limit: 4
+    t.integer  "feedback_id",   limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "con_actions", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -21,6 +29,16 @@ ActiveRecord::Schema.define(version: 20151013022206) do
     t.string   "link",        limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.integer  "bind_id",        limit: 4
+    t.integer  "responce_click", limit: 4
+    t.integer  "responce_close", limit: 4
+    t.integer  "time_click",     limit: 4
+    t.integer  "time_close",     limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "referrers", force: :cascade do |t|
