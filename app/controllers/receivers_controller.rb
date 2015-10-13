@@ -12,7 +12,7 @@ class ReceiversController < ApplicationController
       vis[:sex] = get_sex_string(visitor.sex)
       vis[:age] = visitor.age
       vis[:access_from] = ref.access_from
-      vis[:accessed_at] = ref.created_at.strftime("%Y年%m月%d日 %H:%MH%S")
+      vis[:accessed_at] = ref.created_at.strftime("%Y年%m月%d日 %H:%M:%S")
 
       @visitors << vis
     end
