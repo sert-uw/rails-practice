@@ -16,7 +16,7 @@
       <tr>
         <td><%= Segment.find(bind.segment_id).name %></td>
         <td><%= ConAction.find(bind.con_action_id).name %></td>
-        <td><%= link_to 'FB', bind_feedback_path(bind.id, bind.feedback_id) %></td>
+        <td><%= link_to 'FB', bind_feedback_path(bind.id, bind.feedback.id) %></td>
         <td><%= link_to 'Edit', edit_bind_path(bind) %></td>
         <td><%= link_to 'Destroy', bind, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
