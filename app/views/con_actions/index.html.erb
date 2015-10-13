@@ -1,16 +1,13 @@
-<p id="notice"><%= notice %></p>
+<%= button_to 'New Action', new_con_action_path, method: :get %><br>
 
 <h1>Listing Con Actions</h1>
 
-<table>
+<table id="con_actions_table">
   <thead>
     <tr>
       <th>Name</th>
       <th>Target page</th>
-      <th>Text</th>
-      <th>Image path</th>
-      <th>Link</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -19,10 +16,6 @@
       <tr>
         <td><%= con_action.name %></td>
         <td><%= con_action.target_page %></td>
-        <td><%= con_action.text %></td>
-        <td><%= con_action.image_path %></td>
-        <td><%= con_action.link %></td>
-        <td><%= link_to 'Show', con_action %></td>
         <td><%= link_to 'Edit', edit_con_action_path(con_action) %></td>
         <td><%= link_to 'Destroy', con_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -31,5 +24,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Con action', new_con_action_path %>
