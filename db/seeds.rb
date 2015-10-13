@@ -81,45 +81,34 @@ bin10 = Bind.create(segment_id: seg6.id, con_action_id: ca4.id)
 bin11 = Bind.create(segment_id: seg5.id, con_action_id: ca5.id)
 
 fb1 = Feedback.create(bind_id: bin1, responce_click: 60, responce_close: 40, time_click: 10, time_close: 2)
-bin1.feedback_id = fb1.id
-bin1.save
+bin1.feedback = fb1
 
 fb2 = Feedback.create(bind_id: bin2, responce_click: 50, responce_close: 50, time_click: 9, time_close: 3)
-bin2.feedback_id = fb2.id
-bin2.save
+bin2.feedback = fb2
 
 fb3 = Feedback.create(bind_id: bin3, responce_click: 40, responce_close: 60, time_click: 8, time_close: 4)
-bin3.feedback_id = fb3.id
-bin3.save
+bin3.feedback = fb3
 
 fb4 = Feedback.create(bind_id: bin4, responce_click: 30, responce_close: 70, time_click: 7, time_close: 5)
-bin4.feedback_id = fb4.id
-bin4.save
+bin4.feedback = fb4
 
 fb5 = Feedback.create(bind_id: bin5, responce_click: 20, responce_close: 80, time_click: 6, time_close: 6)
-bin5.feedback_id = fb5.id
-bin5.save
+bin5.feedback = fb5
 
 fb6 = Feedback.create(bind_id: bin6, responce_click: 10, responce_close: 90, time_click: 5, time_close: 7)
-bin6.feedback_id = fb6.id
-bin6.save
+bin6.feedback = fb6
 
 fb7 = Feedback.create(bind_id: bin7, responce_click: 20, responce_close: 80, time_click: 6, time_close: 8)
-bin7.feedback_id = fb7.id
-bin7.save
+bin7.feedback = fb7
 
 fb8 = Feedback.create(bind_id: bin8, responce_click: 60, responce_close: 40, time_click: 10, time_close: 2)
-bin8.feedback_id = fb8.id
-bin8.save
+bin8.feedback = fb8
 
 fb9 = Feedback.create(bind_id: bin9, responce_click: 90, responce_close: 10, time_click: 10, time_close: 2)
-bin9.feedback_id = fb9.id
-bin9.save
+bin9.feedback = fb9
 
 fb10 = Feedback.create(bind_id: bin10, responce_click: 80, responce_close: 20, time_click: 12, time_close: 1)
-bin10.feedback_id = fb10.id
-bin10.save
+bin10.feedback = fb10
 
 fb11 = Feedback.create(bind_id: bin11, responce_click: 40, responce_close: 60, time_click: 8, time_close: 6)
-bin11.feedback_id = fb11.id
-bin11.save
+bin11.feedback = fb11
