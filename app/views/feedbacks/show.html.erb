@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bind:</strong>
+  <%= @feedback.bind_id %>
+</p>
+
+<p>
+  <strong>Responce click:</strong>
+  <%= @feedback.responce_click %>
+</p>
+
+<p>
+  <strong>Responce close:</strong>
+  <%= @feedback.responce_close %>
+</p>
+
+<p>
+  <strong>Time click:</strong>
+  <%= @feedback.time_click %>
+</p>
+
+<p>
+  <strong>Time close:</strong>
+  <%= @feedback.time_close %>
+</p>
+
+<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>
