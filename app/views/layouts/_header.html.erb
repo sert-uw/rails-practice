@@ -7,7 +7,7 @@
           <% if user_signed_in? %>
             <li><%= link_to "セグメント", segments_path %></li>
             <li><%= link_to "アクション", con_actions_path %></li>
-            <li><%= link_to "バインド", '#' %></li>
+            <li><%= link_to "バインド", binds_path %></li>
             <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'navbar-link'  %></li>
           <% else %>
             <li><%= link_to "新規登録", new_user_registration_path, class: 'navbar-link' %></li>
