@@ -1,7 +1,5 @@
 <div id="container">
-<div id="side_menu">
   <%= cell :sidebar %>
-</div>
 
 <h1>Visitor List</h1>
 
@@ -16,6 +14,14 @@
   </thead>
 
   <tbody id="visitor">
+    <% @visitors.each do |vis| %>
+      <tr>
+        <td><%= vis[:sex] %></td>
+        <td><%= vis[:age] %></td>
+        <td><%= vis[:access_from] %></td>
+        <td><%= vis[:accessed_at] %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
 </div>
