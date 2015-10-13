@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Segment:</strong>
+  <%= @bind.segment_id %>
+</p>
+
+<p>
+  <strong>Con action:</strong>
+  <%= @bind.con_action_id %>
+</p>
+
+<p>
+  <strong>Feedback:</strong>
+  <%= @bind.feedback_id %>
+</p>
+
+<%= link_to 'Edit', edit_bind_path(@bind) %> |
+<%= link_to 'Back', binds_path %>

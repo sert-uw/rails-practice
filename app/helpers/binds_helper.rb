@@ -1,0 +1,2 @@
+module BindsHelper
+end
