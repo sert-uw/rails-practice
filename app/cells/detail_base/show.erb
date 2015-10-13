@@ -1,7 +1,13 @@
-<h1>
-  DetailBase#show
-</h1>
+<h1>基本情報</h1>
 
-<p>
-  Find me in app/cells/detail_base/show.erb
-</p>
+<table id="detail_table">
+  <tr>
+    <td>性別</td><td><%= @model.sex %></td>
+  </tr>
+  <tr>
+    <td>年齢</td><td><%= @model.age %></td>
+  </tr>
+  <tr>
+    <td>訪問回数</td><td><%= @model.referrers.count %></td>
+  </tr>
+</table>
