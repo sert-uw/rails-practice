@@ -1,3 +1,15 @@
-// Place all the styles related to the binds controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#bind_table {
+  margin-left:auto;
+  margin-right:auto;
+  border-collapse: collapse;
+}
+
+#bind_table th {
+  border: 1px #DCDCDC solid;
+  padding: 5px;
+}
+
+#bind_table td {
+  border: 1px #DCDCDC solid;
+  padding: 5px;
+}
