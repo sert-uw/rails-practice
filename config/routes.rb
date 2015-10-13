@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :visitors, only: [:index, :new, :show, :create]
+  resources :visitors, only: [:index, :new, :show, :create] do
+    resources :detail_visitors
+  end
   resources :referrers, only: [:new, :show, :create]
   resources :segments
 end
