@@ -1,0 +1,25 @@
+<%= button_to '新規作成', new_bind_path, method: :get %>
+
+<h1>バインド一覧</h1>
+
+<table id="bind_table">
+  <thead>
+    <tr>
+      <th>セグメント</th>
+      <th>アクション</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @binds.each do |bind| %>
+      <tr>
+        <td><%= Segment.find(bind.segment_id).name %></td>
+        <td><%= ConAction.find(bind.con_action_id).name %></td>
+        <td><%= link_to 'FB', bind_feedback_path(bind.id, bind.feedback.id) %></td>
+        <td><%= link_to 'Edit', edit_bind_path(bind) %></td>
+        <td><%= link_to 'Destroy', bind, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

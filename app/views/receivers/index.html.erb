@@ -1,6 +1,9 @@
-<h1>Visitor List</h1>
+<div id="container">
+  <%= cell :sidebar %>
 
-<table>
+<h1>訪問者一覧</h1>
+
+<table id="visitor_table">
   <thead>
     <tr>
       <td>Sex</td>
@@ -11,5 +14,14 @@
   </thead>
 
   <tbody id="visitor">
+    <% @visitors.each do |vis| %>
+      <tr>
+        <td><%= vis[:sex] %></td>
+        <td><%= vis[:age] %></td>
+        <td><%= vis[:access_from] %></td>
+        <td><%= vis[:accessed_at] %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
+</div>

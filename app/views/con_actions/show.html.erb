@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @con_action.name %>
+</p>
+
+<p>
+  <strong>Target page:</strong>
+  <%= @con_action.target_page %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @con_action.text %>
+</p>
+
+<p>
+  <strong>Image path:</strong>
+  <%= @con_action.image_path %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @con_action.link %>
+</p>
+
+<%= link_to 'Edit', edit_con_action_path(@con_action) %> |
+<%= link_to 'Back', con_actions_path %>

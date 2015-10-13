@@ -1,4 +1,4 @@
-class @ChatClass
+class @VisitorClass
   constructor: (url, useWebsocket) ->
     @dispatcher = new WebSocketRails(url, useWebsocket)
     @channel = @dispatcher.subscribe('visitor')
@@ -6,7 +6,12 @@ class @ChatClass
     @events()
 
   events: () =>
+    $('#segmentButton').on 'click', @submitMessage
     @channel.bind 'visitor', @receiveMessage
+
+  submitMessage: (event) =>
+    request = $('#segmentButton').val()
+    @dispatcher.trigger 'update_list', { segment: request }
 
   receiveMessage: (message) =>
     sex = message.sex
@@ -17,4 +22,4 @@ class @ChatClass
     $('#visitor').append row
 
 $ ->
-  window.chatClass = new ChatClass("localhost:3000/websocket", true)
+  window.visitorClass = new VisitorClass("localhost:3000/websocket", true)

@@ -50,6 +50,7 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  text-align: center;
 }
 
 /* header */
@@ -70,8 +71,48 @@ p {
   }
 }
 
+/* button_to */
+
+.button_to {
+  text-align: center;
+}
+
 /* new_user */
 
 #new_user {
   text-align: center;
+}
+
+/* side_menu */
+
+#container {
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+}
+
+#side_menu {
+  width:200px;
+  float:left;
+}
+
+#visitor_table {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#visitor_table th {
+  border: 1px #DCDCDC solid;
+  padding: 5px;
+}
+
+#visitor_table td {
+  border: 1px #DCDCDC solid;
+  padding: 5px;
+}
+
+/* form */
+
+#form {
+  text-align:center;
 }

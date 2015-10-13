@@ -15,6 +15,9 @@ gem 'websocket-rails'
 gem 'bootstrap-sass'
 gem 'sprockets'
 
+gem 'cells', github: 'apotonick/cells'
+gem 'cells-erb'
+
 group :doc do
   gem 'yard'
 end

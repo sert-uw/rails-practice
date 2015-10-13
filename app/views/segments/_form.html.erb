@@ -1,0 +1,58 @@
+<div id="form">
+<%= form_for(@segment) do |f| %>
+  <% if @segment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@segment.errors.count, "error") %> prohibited this segment from being saved:</h2>
+
+      <ul>
+      <% @segment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'セグメント名' %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label 'ベースタグ' %>:
+    <%= f.radio_button :tags, true %>全訪問者
+    <%= f.radio_button :tags, true %>会員
+    <%= f.radio_button :tags, true %>非会員
+  </div>
+
+  <h2>会員情報に基づくタグ</h2>
+
+  <div class="field">
+    <%= f.label '性別' %>:
+    <%= f.check_box :tags, {muliple: true}, true, false %>男性
+    <%= f.check_box :tags, {muliple: true}, true, false %>女性
+  </div>
+
+  <div class="field">
+    <%= f.label '年代' %>:
+    <%= f.check_box :tags, {muliple: true}, true, false %>10代
+    <%= f.check_box :tags, {muliple: true}, true, false %>20代
+    <%= f.check_box :tags, {muliple: true}, true, false %>30代
+    <%= f.check_box :tags, {muliple: true}, true, false %>40代
+    <%= f.check_box :tags, {muliple: true}, true, false %>50代
+    <%= f.check_box :tags, {muliple: true}, true, false %>60代
+  </div>
+
+  <h2>リファラに基づくタグ</h2>
+
+  <div class="field">
+    <%= f.label 'アクセス元' %>:
+    <%= f.check_box :tags, {muliple: true}, true, false %>Google検索から
+    <%= f.check_box :tags, {muliple: true}, true, false %>Twitterから
+    <%= f.check_box :tags, {muliple: true}, true, false %>Facebookから
+  </div>
+
+  <div class="actions">
+    <%= f.submit "作成" %>
+  </div>
+<% end %>
+</div>

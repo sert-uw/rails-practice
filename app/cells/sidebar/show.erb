@@ -1,0 +1,7 @@
+<div id="side_menu">
+  <h2>セグメントリスト</h2>
+
+  <% @segments.each do |seg| %>
+    <input id="segmentButton" class="btn btn-primary" type="button" value=<%= seg.name %>><br>
+  <% end %>
+</div>

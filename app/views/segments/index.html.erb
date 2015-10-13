@@ -1,0 +1,28 @@
+<%= button_to '新規作成', new_segment_path, method: :get %><br>
+
+<h1>セグメント一覧</h1>
+
+<table id="segment_table">
+  <thead>
+    <tr>
+      <th>セグメント名</th>
+      <th>タグ</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @segments.each do |segment| %>
+      <tr>
+        <td><%= segment.name %></td>
+        <td>
+          <% segment.tags.each do |tag| %>
+            <%= tag.name %>,
+          <% end %>
+        </td>
+        <td><%= link_to 'Edit', edit_segment_path(segment) %></td>
+        <td><%= link_to 'Destroy', segment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

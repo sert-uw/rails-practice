@@ -1,0 +1,26 @@
+<%= button_to '新規作成', new_con_action_path, method: :get %><br>
+
+<h1>アクション一覧</h1>
+
+<table id="con_actions_table">
+  <thead>
+    <tr>
+      <th>アクション名</th>
+      <th>対象ページ</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @con_actions.each do |con_action| %>
+      <tr>
+        <td><%= con_action.name %></td>
+        <td><%= con_action.target_page %></td>
+        <td><%= link_to 'Edit', edit_con_action_path(con_action) %></td>
+        <td><%= link_to 'Destroy', con_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
