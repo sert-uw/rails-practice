@@ -1,12 +1,13 @@
-<p id="notice"><%= notice %></p>
+<%= link_to 'New Segment', new_segment_path %><br>
 
-<h1>Listing Segments</h1>
+<h1>Segment List</h1>
 
-<table>
+<table id="segment_table">
   <thead>
     <tr>
       <th>Name</th>
-      <th colspan="3"></th>
+      <th>Tags</th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -14,14 +15,14 @@
     <% @segments.each do |segment| %>
       <tr>
         <td><%= segment.name %></td>
-        <td><%= link_to 'Show', segment %></td>
+        <td>
+          <% segment.tags.each do |tag| %>
+            <%= tag.name %>,
+          <% end %>
+        </td>
         <td><%= link_to 'Edit', edit_segment_path(segment) %></td>
         <td><%= link_to 'Destroy', segment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Segment', new_segment_path %>
